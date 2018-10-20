@@ -1,7 +1,7 @@
 // find the cooridinate
 function geoFindMe() {
   var output = document.getElementById("out");
-
+var name="nabin";
   function success(position) {
     var latitude  = position.coords.latitude;
     var longitude = position.coords.longitude;
