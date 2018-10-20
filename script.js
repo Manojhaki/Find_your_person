@@ -16,5 +16,18 @@ function geoFindMe() {
   output.innerHTML = "<p>Locating...</p>";
 
   navigator.geolocation.getCurrentPosition(success, error);
-  <iframe src="https://maps.google.com/maps?q='+latitude+','+longitude+'&hl=en&z=14&amp;output=embed" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 }
+
+const RapidAPI = require('rapidapi-connect');
+
+const rapid = new RapidAPI("Find_your_person", "ProjectKey");
+
+rapid.call('PackageName', 'FunctionName', {
+	'ParameterKey1': 'ParameterValue1',
+	'ParameterKey2': 'ParameterValue2'
+}).on('success', (payload)=>{
+	 /*YOUR CODE GOES HERE*/
+}).on('error', (payload)=>{
+	 /*YOUR CODE GOES HERE*/
+});
